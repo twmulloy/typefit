@@ -6,10 +6,5 @@ None
 
 # Usage
 
-## Javascript
-var element = document.querySelector('body');
-var text = "Suspendisse pellentesque purus massa, sit.";
-element.fit(text);
-
 ## HTML
-<h1 fittext>Suspendisse pellentesque purus massa, sit.</h1>
+`<h1 fittext>Suspendisse pellentesque purus massa, sit.</h1>`
