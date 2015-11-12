@@ -1,0 +1,21 @@
+{
+  "name": "fittext",
+  "authors": [
+    "Thomas Mulloy <twmulloy@gmail.com>"
+  ],
+  "description": "Fit text to parent element by scaling the font-size of the text.",
+  "main": "tm.fittext.js",
+  "moduleType": [],
+  "keywords": [
+    "fittext"
+  ],
+  "license": "MIT",
+  "homepage": "thomasmulloy.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
