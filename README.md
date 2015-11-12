@@ -1,5 +1,5 @@
 # Fittext
-Fit text to parent element by scaling the font-size of the text.
+Fit text to element by scaling the font-size of the text.
 
 # Dependencies
 None
