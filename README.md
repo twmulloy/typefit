@@ -4,6 +4,9 @@ Fit text to element by scaling the font-size of the text.
 # Dependencies
 None
 
+# Bower
+`$ bower install tm.fittext`
+
 # Usage
 Include the script
 `<script src="tm.fittext.js"></script>`
