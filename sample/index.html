@@ -13,6 +13,13 @@ a {
   display: block;
 }
 
+header > h1 {
+  line-height: 72%;
+  text-align: justify;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .w50 {
   display: inline-block;
   margin-right: -4px;
@@ -49,14 +56,23 @@ a {
     }
   });
 </script>
-
-<h1 tf>WE</h1>
-<h1 tf>ARE</h1>
-<h1 tf>AN</h1>
-<h1 tf>AGENCY</h1>
-<h1 tf>PERIOD</h1>
-<h1 tf>BRO.</h1>
-
+<header>
+  <h1 id="myId">We</h1>
+  <script>
+    document.getElementById('myId').tf();
+  </script>
+  <h1 class='my-class'>Are</h1>
+  <h1 class='my-class'>An</h1>
+  <h1 class='my-class'>Agency</h1>
+  <h1 class='my-class'>Period</h1>
+  <script>
+    document.querySelectorAll('.my-class').tf();
+  </script>
+  <h1 bro>Bro.</h1>
+  <script>
+    document.querySelector('[bro]').tf();
+  </script>
+</header>
 
 <h1 tf>&lt;h1&gt;&lt;/h1&gt;</h1>
 <h2 tf>&lt;h2&gt;&lt;/h2&gt;</h2>

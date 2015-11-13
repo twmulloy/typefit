@@ -1,11 +1,16 @@
+"use strict";
+
 var tm = window.tm || {};
 
-tm.typefit = (function(module, p){
+tm.typefit = (function(module, p) {
+
+  var els = [];
 
   var options = {
-    resize: true,
-    refresh: 200,
-    scale: 1.0
+    resize: true, // Update on window resize
+    refresh: 0, // Refresh rate on resize
+    scale: 1.0, // Font size scaling, eg. 0.5 => 50% of element width
+    restore: false // Restore the element display to original, eg. display: inline-block;
   };
 
   var throttle = (function() {
@@ -20,10 +25,15 @@ tm.typefit = (function(module, p){
     throttle(load, options.refresh);
   }
 
-  function fit() {
+  function add() {
+    els.push(this);
+  }
 
+  function fit() {
     var cs, h, b;
-    var text = {}, box = {}, font = {};
+    var text = {},
+      box = {},
+      font = {};
 
     cs = window.getComputedStyle(this);
 
@@ -31,42 +41,58 @@ tm.typefit = (function(module, p){
     this.style.padding = 0;
 
     // defaults
-    this.style.textAlign = 'center';
     this.style.whiteSpace = 'nowrap';
-    this.style.overflow = 'hidden';
+
+    // options
+    this.style.overflow = options.overflow;
 
     // text dimensions
     this.style.display = 'inline';
     h = this.getBoundingClientRect();
-    text.w = h.right - h.left;
+    text.w = h.width;
+    text.h = h.height;
 
     // box dimensions
     this.style.display = 'block';
     b = this.getBoundingClientRect();
-    box.w = b.right - b.left;
-    
+    box.w = b.width;
+
     // font-size adjustment
     font.size = parseFloat(cs.fontSize);
-    font.ratio = font.size / text.w;
-    font.scaled = box.w * font.ratio;
-    this.style.fontSize = font.scaled + 'px';
+    font.ratio_w = font.size / text.w;
+    font.scale_w = box.w * font.ratio_w * options.scale;
 
-    // console.log(this.tagName, 'text', text, 'box', box, 'font', font);
+    this.style.fontSize = font.scale_w + 'px';
+
+    if (options.restore) {
+      this.style.display = null;
+    }
   }
 
   function load() {
-    var elements = document.querySelectorAll('[' + module + '], [tf]');
-    var length = elements.length;
-    while(length--) {
-      fit.call(elements[length]);
+    var length = els.length;
+    while (length--) {
+      fit.call(els[length]);
     }
   }
 
+  Object.prototype[module] = Object.prototype.tf = function() {
+    if (this.length) {
+      var length = this.length;
+      while (length--) {
+        add.call(this[length]);
+      }
+    } else {
+      add.call(this);
+    }
+    load();
+  }
+
   function construct(e) {
-    if(options.resize){
+    document.querySelectorAll('[' + module + '], [tf]')[module]();
+    if (options.resize) {
       window.addEventListener('resize', resize);
     }
-    load.call();
   }
 
   document.addEventListener('DOMContentLoaded', construct);
