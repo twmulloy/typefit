@@ -44,7 +44,7 @@ tm.fittext = (function(module, p){
 
     this.style.display = 'inline';
     this.style.whiteSpace = 'nowrap';
-    this.style.overflowX = 'hidden';
+    this.style.overflow = 'hidden';
     this.style.textAlign = 'center';
     text_width = this.offsetWidth;
 
