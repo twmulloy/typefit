@@ -45,6 +45,7 @@ header > h1 {
 
 </style>
 <script src="../tm.typefit.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 <script>
   WebFont.load({
@@ -61,7 +62,10 @@ header > h1 {
   <script>
     document.getElementById('myId').tf();
   </script>
-  <h1 class='my-class'>Are</h1>
+  <h1 class='jquery'>Are</h1>
+  <script>
+    $('.jquery').get(0).tf();
+  </script>
   <h1 class='my-class'>An</h1>
   <h1 class='my-class'>Agency</h1>
   <h1 class='my-class'>Period</h1>
