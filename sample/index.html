@@ -19,6 +19,11 @@ h1, h2, h3, h4, h5, h6, p {
   width: 25%;
 }
 
+.even {
+  background-color: black;
+  color: white;
+}
+
 .webfont {
   font-family: 'Abril Fatface', cursive;
 }
@@ -48,7 +53,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 <p id="editor" contenteditable fittext>[contenteditable]</p>
 <script>
-document.getElementById("editor").addEventListener("input", function() {
+document.getElementById('editor').addEventListener('keypress', function(e) {
+  if(e.which === 13){
+    e.preventDefault();
+  }
+  this.value = this.innerText;
   tm.fittext();
 }, false);
 </script>
@@ -85,7 +94,7 @@ document.getElementById("editor").addEventListener("input", function() {
   <p fittext>This is sort of a sentence.</p>
 </section>
 
-<section class="w50">
+<section class="w50 even">
   <h1 fittext>Webfont Heading 1</h1>
   <h2 fittext>Webfont Heading 2</h2>
   <h3 fittext>Webfont Heading 3</h3>
@@ -105,7 +114,7 @@ document.getElementById("editor").addEventListener("input", function() {
   <p fittext>This is sort of a sentence.</p>
 </section>
 
-<section class="w25">
+<section class="w25 even">
   <h1 fittext>Webfont Heading 1</h1>
   <h2 fittext>Webfont Heading 2</h2>
   <h3 fittext>Webfont Heading 3</h3>
@@ -125,7 +134,7 @@ document.getElementById("editor").addEventListener("input", function() {
   <p fittext>This is sort of a sentence.</p>
 </section>
 
-<section class="w25">
+<section class="w25 even">
   <h1 fittext>Webfont Heading 1</h1>
   <h2 fittext>Webfont Heading 2</h2>
   <h3 fittext>Webfont Heading 3</h3>
