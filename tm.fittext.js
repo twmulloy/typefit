@@ -30,13 +30,11 @@ tm.fittext = (function(module, p){
   function fit() {
     var width;
     var text_width; 
-    var style;
     var computed_style;
     var font_size;
     var ratio;
     var adjusted_font_size;
 
-    style = JSON.parse(JSON.stringify(this.style));
     this.style.fontSize = null;
     this.style.padding = 0;
     computed_style = window.getComputedStyle(this);
@@ -48,7 +46,7 @@ tm.fittext = (function(module, p){
     this.style.textAlign = 'center';
     text_width = this.offsetWidth;
 
-    this.style.display = style.display;
+    this.style.display = 'block';
     font_size = parseFloat(computed_style.fontSize).toFixed(3);
     ratio = font_size / text_width;
     adjusted_font_size = (width * ratio * options.scale);
@@ -57,19 +55,22 @@ tm.fittext = (function(module, p){
     adjust.call(this);
   }
 
-  function load(e) {
+  function load() {
     var elements = document.querySelectorAll('[' + module + ']');
     var length = elements.length;
     while(length--) {
-      fit.call(elements[length]);  
-    }
-
-    if(options.resize){
-      window.addEventListener('resize', resize);
+      fit.call(elements[length]);
     }
   }
 
-  document.addEventListener('DOMContentLoaded', load);
+  function construct(e) {
+    if(options.resize){
+      window.addEventListener('resize', resize);
+    }
+    load.call();
+  }
+
+  document.addEventListener('DOMContentLoaded', construct);
 
   p = load;
 
