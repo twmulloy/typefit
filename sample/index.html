@@ -1,15 +1,136 @@
 <!doctype html>
 <style>
-h1 {
-  background-color: red;
+body {
+  margin: 0;
 }
-h2 {
-  background-color: blue;
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.w50 {
+  float: left;
   width: 50%;
 }
+
+.w25 {
+  float: left;
+  width: 25%;
+}
+
+.webfont {
+  font-family: 'Abril Fatface', cursive;
+}
+
 </style>
 <script src="../tm.fittext.js"></script>
-<h1 fittext>Suspendisse pellentesque purus massa, sit.</h1>
-<h2 fittext>Suspendisse pellentesque purus massa, sit.</h2>
-<p fittext>Suspendisse pellentesque purus massa, sit.</p>
-<span fittext>Suspendisse pellentesque purus massa, sit.</span>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Abril Fatface']
+    },
+    active: function() {
+      tm.fittext();
+    }
+  });
+</script>
+
+<h1 fittext>&lt;h1&gt;&lt;/h1&gt;</h1>
+<h2 fittext>&lt;h2&gt;&lt;/h2&gt;</h2>
+<h3 fittext>&lt;h3&gt;&lt;/h3&gt;</h3>
+<h4 fittext>&lt;h4&gt;&lt;/h4&gt;</h4>
+<h5 fittext>&lt;h5&gt;&lt;/h5&gt;</h5>
+<h6 fittext>&lt;h6&gt;&lt;/h6&gt;</h6>
+<p fittext>&lt;p&gt;&lt;/p&gt;</p>
+<span fittext>&lt;span&gt;&lt;/span&gt;</span>
+
+<p id="editor" contenteditable fittext>[contenteditable]</p>
+<script>
+document.getElementById("editor").addEventListener("input", function() {
+  tm.fittext();
+}, false);
+</script>
+
+<section>
+  <h1 fittext>Heading 1</h1>
+  <h2 fittext>Heading 2</h2>
+  <h3 fittext>Heading 3</h3>
+  <h4 fittext>Heading 4</h4>
+  <h5 fittext>Heading 5</h5>
+  <h6 fittext>Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+  <span fittext>Inline elements do not really do a whole lot.</span>
+</section>
+
+<section class="webfont">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+  <span fittext>Inline elements do not really do a whole lot.</span>
+</section>
+
+<section class="w50">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
+
+<section class="w50">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
+
+<section class="w25">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
+
+<section class="w25">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
+
+<section class="w25">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
+
+<section class="w25">
+  <h1 fittext>Webfont Heading 1</h1>
+  <h2 fittext>Webfont Heading 2</h2>
+  <h3 fittext>Webfont Heading 3</h3>
+  <h4 fittext>Webfont Heading 4</h4>
+  <h5 fittext>Webfont Heading 5</h5>
+  <h6 fittext>Webfont Heading 6</h6>
+  <p fittext>This is sort of a sentence.</p>
+</section>
