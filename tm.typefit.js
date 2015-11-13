@@ -22,40 +22,34 @@ tm.typefit = (function(module, p){
 
   function fit() {
 
-    var cs, s, r, h;
+    var cs, h, b;
     var text = {}, box = {}, font = {};
 
     cs = window.getComputedStyle(this);
 
-    // defaults
+    // strip
     this.style.padding = 0;
 
-    // text dimensions
-    s = window.getSelection();
-    r = document.createRange();
-    this.style.display = 'inline';
+    // defaults
+    this.style.textAlign = 'center';
     this.style.whiteSpace = 'nowrap';
-    r.selectNodeContents(this);
-    s.removeAllRanges();
-    s.addRange(r);
-    h = r.getBoundingClientRect();
+    this.style.overflow = 'hidden';
+
+    // text dimensions
+    this.style.display = 'inline';
+    h = this.getBoundingClientRect();
     text.w = h.right - h.left;
-    text.h = h.bottom - h.top;
-    s.removeAllRanges();
 
     // box dimensions
     this.style.display = 'block';
-    box.w = this.offsetWidth - 1;
-    box.h = this.offsetHeight - 1;
+    b = this.getBoundingClientRect();
+    box.w = b.right - b.left;
     
     // font-size adjustment
     font.size = parseFloat(cs.fontSize);
     font.ratio = font.size / text.w;
     font.scaled = box.w * font.ratio;
     this.style.fontSize = font.scaled + 'px';
-
-    // cleanup
-    this.style.display = null;
 
     // console.log(this.tagName, 'text', text, 'box', box, 'font', font);
   }
