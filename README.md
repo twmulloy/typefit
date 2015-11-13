@@ -17,7 +17,6 @@ Apply `typefit` or `tf` attribute to element, these will be rendered automatical
 ```
 <h1 typefit>Suspendisse pellentesque purus massa, sit.</h1>
 ```
-Or
 ```
 <h1 tf>Suspendisse pellentesque purus massa, sit.</h1>
 ```
@@ -55,7 +54,6 @@ tm.typefit();
 ```
 $('.my-class').get(0).tf();
 ```
-Or
 
 ```
 $('.my-class')[0].tf();
