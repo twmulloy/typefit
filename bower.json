@@ -1,13 +1,13 @@
 {
-  "name": "fittext",
+  "name": "typefit",
   "authors": [
     "Thomas Mulloy <twmulloy@gmail.com>"
   ],
   "description": "Fit text to parent element by scaling the font-size of the text.",
-  "main": "tm.fittext.js",
+  "main": "tm.typefit.js",
   "moduleType": [],
   "keywords": [
-    "fittext"
+    "typefit", "fittext"
   ],
   "license": "MIT",
   "homepage": "thomasmulloy.com",

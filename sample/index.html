@@ -37,7 +37,7 @@ a {
 }
 
 </style>
-<script src="../tm.fittext.js"></script>
+<script src="../tm.typefit.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 <script>
   WebFont.load({
@@ -45,122 +45,122 @@ a {
       families: ['Abril Fatface']
     },
     active: function() {
-      tm.fittext();
+      tm.typefit();
     }
   });
 </script>
 
-<h1 fittext>WE</h1>
-<h1 fittext>ARE</h1>
-<h1 fittext>AN</h1>
-<h1 fittext>AGENCY</h1>
-<h1 fittext>PERIOD</h1>
-<h1 fittext>BRO.</h1>
+<h1 tf>WE</h1>
+<h1 tf>ARE</h1>
+<h1 tf>AN</h1>
+<h1 tf>AGENCY</h1>
+<h1 tf>PERIOD</h1>
+<h1 tf>BRO.</h1>
 
 
-<h1 fittext>&lt;h1&gt;&lt;/h1&gt;</h1>
-<h2 fittext>&lt;h2&gt;&lt;/h2&gt;</h2>
-<h3 fittext>&lt;h3&gt;&lt;/h3&gt;</h3>
-<h4 fittext>&lt;h4&gt;&lt;/h4&gt;</h4>
-<h5 fittext>&lt;h5&gt;&lt;/h5&gt;</h5>
-<h6 fittext>&lt;h6&gt;&lt;/h6&gt;</h6>
-<p fittext>&lt;p&gt;&lt;/p&gt;</p>
-<span fittext>&lt;span&gt;&lt;/span&gt;</span>
+<h1 tf>&lt;h1&gt;&lt;/h1&gt;</h1>
+<h2 tf>&lt;h2&gt;&lt;/h2&gt;</h2>
+<h3 tf>&lt;h3&gt;&lt;/h3&gt;</h3>
+<h4 tf>&lt;h4&gt;&lt;/h4&gt;</h4>
+<h5 tf>&lt;h5&gt;&lt;/h5&gt;</h5>
+<h6 tf>&lt;h6&gt;&lt;/h6&gt;</h6>
+<p tf>&lt;p&gt;&lt;/p&gt;</p>
+<span tf>&lt;span&gt;&lt;/span&gt;</span>
 
-<p id="editor" contenteditable fittext>[contenteditable]</p>
+<p id="editor" contenteditable tf>[contenteditable]</p>
 <script>
 document.getElementById('editor').addEventListener('keypress', function(e) {
   if(e.which === 13){
     e.preventDefault();
   }
   this.value = this.innerText;
-  tm.fittext();
+  tm.typefit();
 }, false);
 </script>
 
 <section>
-  <h1 fittext>Heading 1</h1>
-  <h2 fittext>Heading 2</h2>
-  <h3 fittext>Heading 3</h3>
-  <h4 fittext>Heading 4</h4>
-  <h5 fittext>Heading 5</h5>
-  <h6 fittext>Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
-  <span fittext>Inline elements do not really do a whole lot, or do they?</span>
+  <h1 tf>Heading 1</h1>
+  <h2 tf>Heading 2</h2>
+  <h3 tf>Heading 3</h3>
+  <h4 tf>Heading 4</h4>
+  <h5 tf>Heading 5</h5>
+  <h6 tf>Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
+  <span tf>Inline elements do not really do a whole lot, or do they?</span>
 </section>
 
 <section class="webfont">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
-  <span fittext>Inline elements do not really do a whole lot, or do they?</span>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
+  <span tf>Inline elements do not really do a whole lot, or do they?</span>
 </section>
 
 <section class="w50">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 <section class="w50 even">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 <section class="w25">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 <section class="w25 even">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 <section class="w25">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 <section class="w25 even">
-  <h1 fittext>Webfont Heading 1</h1>
-  <h2 fittext>Webfont Heading 2</h2>
-  <h3 fittext>Webfont Heading 3</h3>
-  <h4 fittext>Webfont Heading 4</h4>
-  <h5 fittext>Webfont Heading 5</h5>
-  <h6 fittext>Webfont Heading 6</h6>
-  <p fittext>This is sort of a sentence.</p>
+  <h1 tf>Webfont Heading 1</h1>
+  <h2 tf>Webfont Heading 2</h2>
+  <h3 tf>Webfont Heading 3</h3>
+  <h4 tf>Webfont Heading 4</h4>
+  <h5 tf>Webfont Heading 5</h5>
+  <h6 tf>Webfont Heading 6</h6>
+  <p tf>This is sort of a sentence.</p>
 </section>
 
 
 
-<a fittext href="https://github.com/twmulloy/fittext" target="_blank">https://github.com/twmulloy/fittext</a>
-<a fittext href="https://thomasmulloy.com" target="_blank">thomasmulloy.com</a>
+<a tf href="https://github.com/twmulloy/typefit" target="_blank">https://github.com/twmulloy/typefit</a>
+<a tf href="https://thomasmulloy.com" target="_blank">thomasmulloy.com</a>
