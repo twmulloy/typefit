@@ -9,12 +9,20 @@ None
 
 # Usage
 Include the script
-`<script src="tm.typefit.js"></script>`
+```
+<script src="tm.typefit.js"></script>
+```
 
-Apply `typefit` or `tf` attribute to element
-`<h1 tf>Suspendisse pellentesque purus massa, sit.</h1>`
+Apply `typefit` or `tf` attribute to element, these will be rendered automatically.
+```
+<h1 typefit>Suspendisse pellentesque purus massa, sit.</h1>
+```
+Or
+```
+<h1 tf>Suspendisse pellentesque purus massa, sit.</h1>
+```
 
-Or invoke with javascript using the `typefit()` or `tf()` function
+Or invoke with javascript using the `typefit()` or `tf()` functions.
 ```
 <h1 id='my-id'>Suspendisse pellentesque purus massa, sit.</h1>
 <script>
@@ -38,15 +46,24 @@ Or invoke with javascript using the `typefit()` or `tf()` function
 </script>
 ```
 
-## jQuery
-`$('.my-class').get(0).tf();`
-Or
-`$('.my-class')[0].tf();`
+To render registered elements
+```
+tm.typefit();
+```
 
+## jQuery
+```
+$('.my-class').get(0).tf();
+```
+Or
+
+```
+$('.my-class')[0].tf();
+```
 
 
 ## Webfonts
-If using a webfont you will need to include a loader script such as [webfontloader](https://github.com/typekit/webfontloader) and trigger `tm.typefit()` after the webfont loaded event.
+If using a webfont you will need to include a loader script such as [webfontloader](https://github.com/typekit/webfontloader) and trigger `tm.typefit()` after the webfont loaded event to render registered elements.
 
 ### Google Fonts
 ```
@@ -57,7 +74,7 @@ If using a webfont you will need to include a loader script such as [webfontload
       families: ['Abril Fatface']
     },
     active: function() {
-      tm.typefit();
+      tm.typefit(); // Render typefit
     }
   });
 </script>
