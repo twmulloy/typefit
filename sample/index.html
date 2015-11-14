@@ -1,46 +1,22 @@
 <!doctype html>
+<meta charset="utf-8">
+<title>Thomas Mulloy - TypeFit</title>
 <style>
 body {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
 
-a {
-  display: block;
-}
+.wf {
+  font-family: 'Abril Fatface', cursive;
 
-header > h1 {
-  line-height: 72%;
+  line-height: 80%;
   text-align: justify;
-  text-align: center;
   text-transform: uppercase;
 }
 
-.w50 {
-  display: inline-block;
-  margin-right: -4px;
-  margin-top: -4px;
-  width: 50%;
-}
-
-.w25 {
-  display: inline-block;
-  margin-right: -4px;
-  margin-top: -4px;
-  width: 25%;
-}
-
-.even {
-  background-color: black;
-  color: white;
-}
-
-.webfont {
-  font-family: 'Abril Fatface', cursive;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 </style>
@@ -57,130 +33,33 @@ header > h1 {
     }
   });
 </script>
-<header>
-  <h1 id="myId">We</h1>
-  <script>
-    document.getElementById('myId').tf();
-  </script>
-  <h1 class='jquery'>Are</h1>
-  <script>
-    $('.jquery').get(0).tf();
-  </script>
-  <h1 class='my-class'>An</h1>
-  <h1 class='my-class'>Agency</h1>
-  <h1 class='my-class'>Period</h1>
-  <script>
-    document.querySelectorAll('.my-class').tf();
-  </script>
-  <h1 bro>Bro.</h1>
-  <script>
-    document.querySelector('[bro]').tf();
-  </script>
-</header>
 
-<h1 tf>&lt;h1&gt;&lt;/h1&gt;</h1>
-<h2 tf>&lt;h2&gt;&lt;/h2&gt;</h2>
-<h3 tf>&lt;h3&gt;&lt;/h3&gt;</h3>
-<h4 tf>&lt;h4&gt;&lt;/h4&gt;</h4>
-<h5 tf>&lt;h5&gt;&lt;/h5&gt;</h5>
-<h6 tf>&lt;h6&gt;&lt;/h6&gt;</h6>
-<p tf>&lt;p&gt;&lt;/p&gt;</p>
-<span tf>&lt;span&gt;&lt;/span&gt;</span>
-
-<p id="editor" contenteditable tf>[contenteditable]</p>
-<script>
-document.getElementById('editor').addEventListener('keypress', function(e) {
-  if(e.which === 13){
-    e.preventDefault();
-  }
-  this.value = this.innerText;
-  tm.typefit();
-}, false);
-</script>
-
-<section>
-  <h1 tf>Heading 1</h1>
-  <h2 tf>Heading 2</h2>
-  <h3 tf>Heading 3</h3>
-  <h4 tf>Heading 4</h4>
-  <h5 tf>Heading 5</h5>
-  <h6 tf>Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-  <span tf>Inline elements do not really do a whole lot, or do they?</span>
-</section>
-
-<section class="webfont">
-  <h1 tf>Webfont Heading 1</h1>
-  <h2 tf>Webfont Heading 2</h2>
-  <h3 tf>Webfont Heading 3</h3>
-  <h4 tf>Webfont Heading 4</h4>
-  <h5 tf>Webfont Heading 5</h5>
-  <h6 tf>Webfont Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-  <span tf>Inline elements do not really do a whole lot, or do they?</span>
-</section>
-
-<section class="webfont w50">
-  <h1 tf>Webfont Heading 1</h1>
-  <h2 tf>Webfont Heading 2</h2>
-  <h3 tf>Webfont Heading 3</h3>
-  <h4 tf>Webfont Heading 4</h4>
-  <h5 tf>Webfont Heading 5</h5>
-  <h6 tf>Webfont Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
-
-<section class="w50 even">
-  <h1 tf>Heading 1</h1>
-  <h2 tf>Heading 2</h2>
-  <h3 tf>Heading 3</h3>
-  <h4 tf>Heading 4</h4>
-  <h5 tf>Heading 5</h5>
-  <h6 tf>Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
-
-<section class="webfont w25">
-  <h1 tf>Webfont Heading 1</h1>
-  <h2 tf>Webfont Heading 2</h2>
-  <h3 tf>Webfont Heading 3</h3>
-  <h4 tf>Webfont Heading 4</h4>
-  <h5 tf>Webfont Heading 5</h5>
-  <h6 tf>Webfont Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
-
-<section class="w25 even">
-  <h1 tf>Heading 1</h1>
-  <h2 tf>Heading 2</h2>
-  <h3 tf>Heading 3</h3>
-  <h4 tf>Heading 4</h4>
-  <h5 tf>Heading 5</h5>
-  <h6 tf>Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
-
-<section class="w25">
-  <h1 tf>Heading 1</h1>
-  <h2 tf>Heading 2</h2>
-  <h3 tf>Heading 3</h3>
-  <h4 tf>Heading 4</h4>
-  <h5 tf>Heading 5</h5>
-  <h6 tf>Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
-
-<section class="webfont w25 even">
-  <h1 tf>Webfont Heading 1</h1>
-  <h2 tf>Webfont Heading 2</h2>
-  <h3 tf>Webfont Heading 3</h3>
-  <h4 tf>Webfont Heading 4</h4>
-  <h5 tf>Webfont Heading 5</h5>
-  <h6 tf>Webfont Heading 6</h6>
-  <p tf>This is sort of a sentence.</p>
-</section>
+<h1 class="wf" tf>We</h1>
+<h2 class="wf" tf>Are</h2>
+<h3 class="wf" tf>A</h3>
+<h4 class="wf" tf>Digital</h4>
+<h5 class="wf" tf>Agency</h5>
+<h6 class="wf" tf>Period</h6>
+<p  class="wf" tf>Bro.</p>
 
 
+<p tf>We do cool stuff</p>
+<p tf>We love craft beer</p>
+<p tf>We ride fixed gears</p>
+<p tf>We all have beards</p>
+<p tf>We put the “Digital” in “Cradigitalft”</p>
+<p tf>Period. After. Every. Word.</p>
+
+<span tf>We + You</span>
+<span tf>=</span>
+<span tf>Wii U</span>
+
+<p tf>In office washer & dryer</p>
+<p tf>NEVER</p>
+<p tf>GO</p>
+<p tf>HOME</p>
+<h1 tf>Competitive pay for job title exhange program</h1>
+<h3 tf>Senior XVIII Engineer Diploma in 2 years</h3>
 
 <a tf href="https://github.com/twmulloy/typefit" target="_blank">https://github.com/twmulloy/typefit</a>
 <a tf href="https://thomasmulloy.com" target="_blank">thomasmulloy.com</a>

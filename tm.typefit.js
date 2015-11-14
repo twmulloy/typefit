@@ -26,10 +26,16 @@ tm.typefit = (function(module, p) {
   }
 
   function add() {
+    if(!(this instanceof HTMLElement)){
+      return;
+    }
     els.push(this);
   }
 
   function fit() {
+
+
+
     var cs, h, b;
     var text = {},
       box = {},
