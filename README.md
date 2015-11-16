@@ -26,6 +26,11 @@ Or invoke with javascript using the `typefit()` or `tf()` functions.
 <h1 id='my-id'>Suspendisse pellentesque purus massa, sit.</h1>
 <script>
   document.getElementById('my-id').tf();
+
+  // Options
+  document.getElementById('my-id').tf({
+    scale: 0.5
+  });
 </script>
 ```
 
@@ -58,7 +63,6 @@ $('.my-class').get(0).tf();
 ```
 $('.my-class')[0].tf();
 ```
-
 
 ## Webfonts
 If using a webfont you will need to include a loader script such as [webfontloader](https://github.com/typekit/webfontloader) and trigger `tm.typefit()` after the webfont loaded event to render registered elements.
