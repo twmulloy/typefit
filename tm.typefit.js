@@ -33,9 +33,6 @@ tm.typefit = (function(module, p) {
   }
 
   function fit() {
-
-
-
     var cs, h, b;
     var text = {},
       box = {},
@@ -48,6 +45,7 @@ tm.typefit = (function(module, p) {
 
     // defaults
     this.style.whiteSpace = 'nowrap';
+    this.style.overflow = 'hidden';
 
     // options
     this.style.overflow = options.overflow;
